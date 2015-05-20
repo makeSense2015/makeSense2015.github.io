@@ -57,7 +57,9 @@
     device.write(ab.buffer);
 
     poller = setInterval(function() {
+      console.log("Device: " + device);
       var input_raw = device.read(16);
+      onsole.log("Device Read: " + device.read(16));
       input = new Uint8Array(input_raw);
       device.write(ab.buffer);
     }, 20);
